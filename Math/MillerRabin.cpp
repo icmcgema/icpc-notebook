@@ -5,6 +5,10 @@ namespace MillerRabin {
 	using ll = long long;
 
 	ll modmul(ll a, ll b, ll M) {
+		#ifdef __SIZEOF_INT128__
+			return (__int128) a * (__int128) b % M;
+		#endif
+			
 		ll ans = 0;
 		while(b) {
 			if(b&1) {
