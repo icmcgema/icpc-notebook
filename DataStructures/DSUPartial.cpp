@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class DSUPartial {
-public:
+struct DSUPartial {
 	int n, curTime;
 	std::vector<int> par, sz, tim;
 
@@ -61,7 +60,6 @@ int main() {
 			uf.merge(i, k, m - k + 1);
 		}
 	}
-
 
 	while(q--) {
 		int u, v; scanf("%d%d", &u, &v);
