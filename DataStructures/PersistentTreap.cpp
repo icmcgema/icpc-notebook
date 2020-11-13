@@ -6,12 +6,10 @@ namespace PersistentTreap {
 	mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 	struct node {
 		node * l, * r;
-		int rank, cnt;
-		int val; // valor que realmente eh guardado na treap
+		int cnt, val; // valor que realmente eh guardado na treap
 
 		node(int x = 0) {
 			l = r = NULL;
-			rank = rng();
 			val = x;
 		}
 	};
@@ -24,7 +22,7 @@ namespace PersistentTreap {
 
 	treap copy(treap t) {
 		treap x = new node(t->c);
-		memcpy(t, x, sizeof(node));
+		memcpy(x, t, sizeof(node));
 		return x;
 	}
 
@@ -53,7 +51,7 @@ namespace PersistentTreap {
 	void merge(treap & t, treap l, treap r) {
 		if(!l or !r) t = (l? l : r);
 	 
-		else if(l->rank > r->rank) {
+		else if(rng()%(cn(l)+cn(r)) <= cn(l)) {
 			t = copy(l);
 			merge(t->r, t->r, r);
 		} else {
@@ -62,25 +60,5 @@ namespace PersistentTreap {
 		}
 	 
 		upd(t);
-	}
-
-	// retorna versao nova da treap, onde 'x' está inserido entre a posição 'p' e 'p'+1 (as posições são 1-based). Se 'p' for 0, ele insere antes do primeiro elemento
-	treap insert(treap t, int p, int x) {
-		treap L, R;
-		split(t, L, R, p);
-		treap mid = new node(x);
-		merge(t, t, L);
-		mege(t, t, mid);
-		merge(t, t, R);
-		return t;
-	}
-
-	// retorna versao nova da treap 't', onde a posicao 'p' (1-based) foi removida
-	treap erase(treap t, int p) {
-		treap L, R;
-		split(t, t, R, p);
-		split(t, L, t, p-1);
-		merge(t, L, R);
-		return t;
 	}
 };
