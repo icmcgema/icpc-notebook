@@ -19,7 +19,7 @@ struct RandomizedHeap {
 
     // combines two heaps a and b
     // consumes heap a and b, and procudes a new heap
-    friend ptr meld(ptr a, ptr b) {
+    friend auto meld(ptr a, ptr b) -> ptr {
         if (!a) return b;
         if (!b) return a;
 
@@ -33,15 +33,15 @@ struct RandomizedHeap {
         return a;
     }
 
-    friend void insert(ptr& a, T x) {
+    friend auto insert(ptr& a, T x) -> void {
         a = meld(move(a), make_unique<RandomizedHeap>(x));
     }
 
-    friend void pop(ptr& a) {
+    friend auto pop(ptr& a) -> void {
         a = meld(move(a->l), move(a->r));
     }
 
-    T min() {
+    auto min() -> T {
         return val;
     }
 };

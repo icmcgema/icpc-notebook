@@ -12,7 +12,7 @@ struct Treap {
 
         Node(T const& v) : val(v), sz(1), h(rd()), l(nullptr), r(nullptr) {};
 
-        void print() {
+        auto print() -> void {
             if (l) l->print();
             cout << val << ' ';
             if (r) r->print();
@@ -23,7 +23,7 @@ struct Treap {
 
     ptr root;
 
-    void op(Node* t) {
+    auto op(Node* t) -> void {
         if (!t) return;
 
         t->sz = 1;
@@ -31,7 +31,7 @@ struct Treap {
         if (t->r) t->sz += t->r->sz;
     }
 
-    ptr merge(ptr l, ptr r) {
+    auto merge(ptr l, ptr r) -> ptr {
         if (!l) return r;
         if (!r) return l;
 
@@ -47,7 +47,7 @@ struct Treap {
         }
     }
 
-    pair<ptr, ptr> split(ptr t, T const& v) {
+    auto split(ptr t, T const& v) -> pair<ptr, ptr> {
         if (!t) return {};
 
         ptr x;
@@ -63,7 +63,7 @@ struct Treap {
         }
     }
 
-    pair<ptr, ptr> split_pos(ptr t, int pos) {
+    auto split_pos(ptr t, int pos) -> pair<ptr, ptr> {
         if (!t) return {};
 
         int p = (t->l ? t->l->sz : 0) + 1;
@@ -81,33 +81,33 @@ struct Treap {
         }
     }
 
-    void insert(T const& v) {
+    auto insert(T const& v) -> void {
         auto [l, r] = split(move(root), v);
         l = merge(move(l), make_unique<Node>(v));
         root = merge(move(l), move(r));
     }
 
-    void insert_pos(T const& v, int pos) {
+    auto insert_pos(T const& v, int pos) -> void {
         auto [l, r] = split_pos(move(root), pos);
         l = merge(move(l), make_unique<Node>(v));
         root = merge(move(l), move(r));
     }
 
-    void erase(T const& v) {
+    auto erase(T const& v) -> void {
         auto [l, aux] = split(move(root), v);
         ptr r;
         tie(aux, r) = split_pos(move(aux), 1);
         root = merge(move(l), move(r));
     }
 
-    void print() {
+    auto print() -> void {
         if (root) root->print();
         cout << '\n';
     }
 
 };
 
-int main() {
+auto main() -> int {
     Treap<int> t;
 
     t.insert(1);

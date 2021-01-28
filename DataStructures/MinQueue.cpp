@@ -8,29 +8,29 @@ struct MinQueue {
     deque<pair<T, int>> q;
     int l = 0, r = 0;
 
-    void push(T const& val) {
+    auto push(T const& val) -> void {
         while (!q.empty() and !cmp(q.back().first,val)) {
             q.pop_back();
         }
         q.emplace_back(val, r++);
     }
 
-    void pop() {
+    auto pop() -> void {
         if (!q.empty() and q.front().second == l) {
             q.pop_front();
         }
         l++;
     }
 
-    T get() {
+    auto get() -> T {
         return q.front().first;
     }
 
-    bool empty() {
+    auto empty() -> bool {
         return q.empty();
     }
 
-    int size() {
+    auto size() -> int {
         return r-l;
     }
 };

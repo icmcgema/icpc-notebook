@@ -14,14 +14,14 @@ struct BIT {
     BIT(int n) : b(n+1) {};
 
 // if you want to access position 0, add pos++ in the first line
-    void add(int pos, T x) {
+    auto add(int pos, T x) -> void {
         for (int i = pos; i < (int)b.size(); i += i&-i) {
             b[i] += x;
         }
     }
 
 // if you want to access position 0, add pos++ in the first line
-    T get(int pos) {
+    auto get(int pos) -> T {
         T r = 0;
         for (int i = pos; i > 0; i -= i&-i) {
             r += b[i];
@@ -29,13 +29,13 @@ struct BIT {
         return r;
     }
 
-    T get(int l, int r) {
+    auto get(int l, int r) -> T {
         return get(r) - get(l-1);
     }
 };
 
 // https://www.spoj.com/problems/INVCNT/
-int main() {
+auto main() -> int {
     ios::sync_with_stdio(false);
 
     int t;
