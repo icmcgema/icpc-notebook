@@ -7,7 +7,7 @@ struct Bit2D {
     vector<vector<T>> b;
 
     Bit2D(int n_, int m_) :
-        n(n_), m(m_), b(n, vector<T>(m))
+        n(n_+2), m(m_+2), b(n, vector<T>(m))
     {}
 
     // adds delta to position (x, y)
