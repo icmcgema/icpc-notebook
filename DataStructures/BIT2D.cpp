@@ -11,7 +11,7 @@ struct Bit2D {
     {}
 
     // adds delta to position (x, y)
-    void add(int x, int y, T delta) {
+    auto add(int x, int y, T delta) -> void {
         x++, y++;
         for (int i = x; i < n; i += i&-i) {
             for (int j = y; j < n; j += j&-j) {
@@ -21,7 +21,7 @@ struct Bit2D {
     }
 
     // returns sum of rectangle [0, x] x [0, y]
-    T get(int x, int y) {
+    auto get(int x, int y) -> T {
         x++, y++;
         T ans = 0;
         for (int i = x; i; i -= i&-i) {
@@ -34,7 +34,7 @@ struct Bit2D {
 
     // returns sum of rectagle defined by [x1, x2] x [y1, y2]
     // generalizable to N-dimensional BIT using inclusion-exclusion principle
-    T get_rectangle(int x1, int x2, int y1, int y2) {
+    auto get_rectangle(int x1, int x2, int y1, int y2) -> T {
         return get(x2, y2) - get(x1-1, y2) - get(x2, y1-1) + get(x1-1, y1-1);
     }
 };
