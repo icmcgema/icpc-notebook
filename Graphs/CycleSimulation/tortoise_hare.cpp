@@ -58,7 +58,7 @@ struct Simulator {
 	}
 
 	// retorna periodo do ciclo
-	int find_period_tortoise_hare(const State cur) {
+	int find_period_tortoise_hare(State & cur, int & t) {
 		State tor = cur, hare = cur;
 
 		// Acha o ponto de inicio do ciclo
@@ -68,17 +68,28 @@ struct Simulator {
 		} while(tor.hash() != hare.hash());
 
 		// Calcula o periodo do ciclo
-		int tim = 0;
+		int per = 0;
 		do {
-			tim += tor.next();
+			per += tor.next();
 		} while(tor.hash() != hare.hash());
 
-		return tim;
+		// Faz a simulacao ate o inicio do ciclo
+		do {
+			State aux = cur;
+			int tim = cur.next();
+			if(t - tim < 0) {
+				cur = aux;
+				return 0;
+			}
+			t -= tim;
+		} while(cur.hash() != tor.hash());
+
+		return per;
 	}
 
 	// Roda a simulacao
 	State Simulate(int t, State cur, bool use_tortoise_hare = false) {
-		int period = use_tortoise_hare? find_period_tortoise_hare(cur) : find_period(cur, t);
+		int period = use_tortoise_hare? find_period_tortoise_hare(cur, t) : find_period(cur, t);
 
 		if(period) t %= period;
 

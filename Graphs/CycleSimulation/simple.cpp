@@ -26,14 +26,16 @@ struct Simulator {
 	State Simulate(int t, State cur) {
 		int period = 0;
 
-		while(t--) {
+		while(t > 0) {
 			if(vis.count(cur.hash())) {
 				period -= vis[cur.hash()];
 				break;
 			}
 			
 			vis[cur.hash()] = period;
-			cur = cur.next()
+			cur = cur.next();
+			period++;
+			t--;
 		}
 
 		if(t) t %= period;
