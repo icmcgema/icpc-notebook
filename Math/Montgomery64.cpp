@@ -46,36 +46,37 @@ struct Montgomery64 {
     }
 };
 
-// creation + 1 mult has equal execution time as 1 int128 mulmod
-// up to 2.5 times faster when doing lots of multiplications
+// creation + 1 mult has higher time as 1 int128 mulmod
+// becomes faster afer around 4 multiplications + inits
+// up to 6 times faster when doing lots of multiplications
 // modulo de same number
 // -----------------------------------------------------------
 //                    benchmark results
 // -----------------------------------------------------------
-// int64modmul/1          10.1 ns         10.1 ns     65643538
-// int64modmul/2          21.6 ns         21.5 ns     30587116
-// int64modmul/4          40.3 ns         40.2 ns     17132524
-// int64modmul/8          83.2 ns         83.1 ns      8281352
-// int64modmul/16          184 ns          184 ns      3879638
-// int64modmul/32          391 ns          390 ns      1805350
-// int64modmul/64          761 ns          760 ns       856000
-// int64modmul/128        1518 ns         1516 ns       463365
-// int64modmul/256        3095 ns         3090 ns       228800
-// int64modmul/512        6380 ns         6371 ns       113619
-// int64modmul/1024      12464 ns        12449 ns        57368
-// int64modmul/2048      24474 ns        24452 ns        28183
-// int64modmul/4096      48872 ns        48813 ns        13930
+// int64modmul/1          19.0 ns         19.0 ns     36185356
+// int64modmul/2          53.6 ns         53.6 ns     12638112
+// int64modmul/4           117 ns          117 ns      6188974
+// int64modmul/8           231 ns          231 ns      3026745
+// int64modmul/16          465 ns          465 ns      1499313
+// int64modmul/32          954 ns          954 ns       718907
+// int64modmul/64         1900 ns         1899 ns       369682
+// int64modmul/128        3782 ns         3780 ns       183062
+// int64modmul/256        7663 ns         7659 ns        90720
+// int64modmul/512       15193 ns        15185 ns        45400
+// int64modmul/1024      30072 ns        30051 ns        23488
+// int64modmul/2048      59431 ns        59398 ns        10000
+// int64modmul/4096     112081 ns       112020 ns         7679
 // -----------------------------------------------------------
-// int64mont/1            8.95 ns         8.93 ns     75784040
-// int64mont/2            12.9 ns         12.9 ns     54609868
-// int64mont/4            20.4 ns         20.4 ns     34621673
-// int64mont/8            34.9 ns         34.9 ns     19985642
-// int64mont/16           66.7 ns         66.7 ns     10422145
-// int64mont/32            137 ns          136 ns      5122867
-// int64mont/64            279 ns          279 ns      2516347
-// int64mont/128           572 ns          572 ns      1190575
-// int64mont/256          1133 ns         1132 ns       604272
-// int64mont/512          2319 ns         2315 ns       302561
-// int64mont/1024         4519 ns         4515 ns       153520
-// int64mont/2048         9794 ns         9732 ns        74967
-// int64mont/4096        20945 ns        20655 ns        32777
+// int64mont/1            56.8 ns         56.7 ns     12108520
+// int64mont/2            58.7 ns         58.6 ns     11591214
+// int64mont/4            63.9 ns         63.8 ns     10452542
+// int64mont/8            80.0 ns         80.0 ns      8625561
+// int64mont/16            116 ns          116 ns      5997047
+// int64mont/32            188 ns          188 ns      3744182
+// int64mont/64            334 ns          334 ns      2051937
+// int64mont/128           620 ns          619 ns      1113791
+// int64mont/256          1200 ns         1199 ns       587902
+// int64mont/512          2321 ns         2320 ns       298828
+// int64mont/1024         4631 ns         4628 ns       152314
+// int64mont/2048         9186 ns         9182 ns        75944
+// int64mont/4096        18280 ns        18272 ns        38717
