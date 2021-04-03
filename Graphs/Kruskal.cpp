@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int MAXN = 2e5 + 5;
-
 namespace Kruskal {
 	struct UF {
 		vector<int> par;

@@ -1,5 +1,9 @@
 # icpc-notebook
 
+## Link da Planilha
+
+https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsDnGs/edit#gid=0
+
 ## Todo
 
 DataStructures
