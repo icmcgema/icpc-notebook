@@ -46,7 +46,7 @@ struct SegtreeBeats {
 		build(1, 0, sz-1);
 	}
 
-	SegtreeBeats(vector<int> vec) {
+	SegtreeBeats(vector<int> & vec) {
 		*this = SegtreeBeats(vec.size());
 
 		for(int i = 0; i < n; ++i) {
@@ -121,21 +121,3 @@ struct SegtreeBeats {
 
 	#undef mid
 };
-
-int main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-
-	int n, q; cin >> n;
-
-	SegtreeBeats seg(n);
-
-	int op, l, r, x; 
-	while(cin >> op >> l >> r) {
-		if(op == 1) {
-			cout << seg.query(1, 0, n-1, l-1, r-1) << '\n';
-		} else {
-			cin >> x;
-			seg.update(1, 0, n-1, l-1, r-1, x);
-		}
-	}
-}
