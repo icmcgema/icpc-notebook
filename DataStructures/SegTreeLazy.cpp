@@ -8,8 +8,6 @@ struct Seg {
 		}
 	};
 
-	const Node NONE{(ll) 1e17, 0}; // HERE (null node value)
-
 	int n;
 	vector<Node> seg;
 	Seg(int n) : n(n), seg(4 * n) {}
@@ -51,9 +49,16 @@ struct Seg {
 
 	Node query(int p, int i, int j, int l, int r) {
 		prop(p, i, j);
-		if (i > r || j < l) return NONE;
+		assert(i <= r && j >= l);
 		if (i >= l && j <= r) return seg[p];
 		int m = (i + j) / 2;
+		if (m >= r) {
+			prop(p + p + 1, m + 1, j);
+			return query(p + p, i, m, l, r);
+		} else if (m < l) {
+			prop(p + p, i, m);
+			return query(p + p + 1, m + 1, j, l, r);
+		}
 		Node L = query(p + p, i, m, l, r);
 		Node R = query(p + p + 1, m + 1, j, l, r);
 		return merge(L, R);
