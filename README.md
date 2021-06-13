@@ -71,14 +71,14 @@ Graphs
 - BiconnectedComponents.cpp
 - EulerCycle.cpp
 - /Tree
--- EulerTour.cpp
--- Centroid.cpp
--- CentroidQuery.cpp
--- HeavyLight.cpp
--- LCA.cpp
--- LinkCutTree.cpp
--- SmallToLarge.cpp
--- Isomorphism.cpp
+    - EulerTour.cpp
+    - Centroid.cpp
+    - CentroidQuery.cpp
+    - HeavyLight.cpp
+    - LCA.cpp
+    - LinkCutTree.cpp
+    - SmallToLarge.cpp
+    - Isomorphism.cpp
 
 Math
 - Karatsuba.cpp
@@ -143,24 +143,24 @@ Misc
 
 Solutions
 - /Geometry
--- NearestTwoPoints.cpp
--- FarthestTwoPoints.cpp
--- SmallestEnclosingCircle.cpp
+    - NearestTwoPoints.cpp
+    - FarthestTwoPoints.cpp
+    - SmallestEnclosingCircle.cpp
 - /Math
--- GrayCode.cpp
--- BurnsideLemma.cpp
+    - GrayCode.cpp
+    - BurnsideLemma.cpp
 - /DP
--- MaximumClique.cpp
--- CycleCount.cpp
--- PermutationTransformTrick.cpp
--- ConnectedComponent.cpp
+    - MaximumClique.cpp
+    - CycleCount.cpp
+    - PermutationTransformTrick.cpp
+    - ConnectedComponent.cpp
 - /Graph
--- DAGWidth.cpp
+    - DAGWidth.cpp
 - /Strings
--- LCS.cpp
--- Periods.cpp
--- Rotation.cpp
--- Palindrome.cpp
--- StringDivisors.cpp
+    - LCS.cpp
+    - Periods.cpp
+    - Rotation.cpp
+    - Palindrome.cpp
+    - StringDivisors.cpp
 - /DataStructures
--- Mo.cpp 
+    - Mo.cpp 
