@@ -14,19 +14,22 @@ DataStructures
 - [SegTree.cpp](DataStructures/SegTree.cpp)
 - SegTreePersistent.cpp
 - SegTree2D.cpp
+- [SegTreeLazy.cpp](DataStructures/SegTreeLazy.cpp)
 - [SegTreeBeats.cpp](DataStructures/SegTreeBeats.cpp)
 - SegTreeSparse.cpp
 - ImplicitSet.cpp
 - [MergeSortTree.cpp](DataStructures/MergeSortTree.cpp)
 - [MinQueue.cpp](DataStructures/MinQueue.cpp)
 - [Treap.cpp](DataStructures/Treap.cpp)
-- TreapPersistent.cpp
+- [TreapPersistent.cpp](DataStructures/TreapPersistent.cpp)
 - [RandomizedHeap.cpp](DataStructures/RandomizedHeap.cpp)
 - [WaveletTree.cpp](DataStructures/WaveletTree.cpp)
+- [WaveletTreeToggle.cpp](DataStructures/WaveletTreeToggle.cpp)
 - SplayTree.cpp
 - KDTree.cpp
 - LichaoTree.cpp
 - Paretto.cpp
+- [TwoPointers.cpp](DataStructures/TwoPointers.cpp)
 
 DP
 - DivideAndConquer.cpp
@@ -40,12 +43,13 @@ DP
 
 Geometry
 - [Point.cpp](Geometry/Point.cpp)
+- [PointUtils.cpp](Geometry/PointUtils.cpp)
 - Point3D.cpp
 - Circle.cpp
 - Triangle.cpp
 - [ConvexHull.cpp](Geometry/ConvexHull.cpp)
 - RotatingCalipers.cpp
-- PicksTheorem.cpp
+- [Pick.cpp](Geometry/Pick.cpp)
 - [HalfPlanesIntersection.cpp](Geometry/HalfPlanesIntersection.cpp)
 - Minkowski.cpp
 - DelaunayTriangulation.cpp
@@ -56,12 +60,14 @@ Graphs
 - [Kruskal.cpp](Graphs/Kruskal.cpp)
 - [BellmanFord.cpp](Graphs/BellmanFord.cpp)
 - [Dinic.cpp](Graphs/Dinic.cpp)
+- [DirectedMST.cpp](Graphs/DirectedMST.cpp)
 - EdmondsKarp.cpp
 - [Hungarian.cpp](Graphs/Hungarian.cpp)
 - [MCMF.cpp](Graphs/MCMF.cpp)
 - [Kuhn.cpp](Graphs/Kuhn.cpp)
-- 2Sat.cpp
+- [TwoSat.cpp](Graphs/TwoSat.cpp)
 - Kosaraju.cpp
+- [EdmondsMDST.cpp](Graphs/EdmondsMDST.cpp)
 - [DominatorTree.cpp](Graphs/DominatorTree.cpp)
 - TarjanSCC.cpp
 - TarjanBridge.cpp
@@ -70,15 +76,21 @@ Graphs
 - BlockCut.cpp
 - BiconnectedComponents.cpp
 - [EulerCycle.cpp](Graphs/EulerCycle.cpp)
-- /Tree
-    - EulerTour.cpp
-    - [Centroid.cpp](Tree/Centroid.cpp)
-    - CentroidQuery.cpp
-    - HeavyLight.cpp
-    - [LCA.cpp](Graphs/LCA.cpp)
-    - LinkCutTree.cpp
-    - SmallToLarge.cpp
-    - [Isomorphism.cpp](Tree/Isomorphism.cpp)
+- [MCMF.cpp](Graphs/MCMF.cpp)
+- /CycleSimulation
+    - [full.cpp](Graphs/CycleSimulation/full.cpp)
+    - [simple.cpp](Graphs/CycleSimulation/simple.cpp)
+    - [tortoise](Graphs/CycleSimulation/tortoise_hare.cpp)_hare.cpp
+
+Tree
+- EulerTour.cpp
+- [Centroid.cpp](Tree/Centroid.cpp)
+- CentroidQuery.cpp
+- HeavyLight.cpp
+- [LCA.cpp](Tree/LCA.cpp)
+- LinkCutTree.cpp
+- SmallToLarge.cpp
+- [Isomorphism.cpp](Tree/Isomorphism.cpp)
 
 Math
 - [Karatsuba.cpp](Math/Karatsuba.cpp)
@@ -86,7 +98,8 @@ Math
 - [MillerRabin.cpp](Math/MillerRabin.cpp)
 - PollardRho.cpp
 - PollardRhoFast.cpp
-- Montgomery.cpp
+- [Montgomery64.cpp](Math/Montgomery64.cpp)
+- Montgomery128.cpp
 - Diophantine.cpp
 - ChineseRemainder.cpp
 - ModMul.cpp
@@ -123,8 +136,8 @@ Strings
 - Trie.cpp
 - [Hash.cpp](Strings/Hash.cpp)
 - SuffixTree.cpp
-- SuffixArray.cpp
-- SuffixAutomata.cpp
+- [SuffixArray.cpp](Strings/SuffixArray.cpp)
+- [SuffixAutomaton.cpp](Strings/SuffixAutomaton.cpp)
 - KMPAutomata.cpp
 - [KMP.cpp](Strings/KMP.cpp)
 - [Z.cpp](Strings/Z.cpp)
@@ -140,6 +153,7 @@ Misc
 - FastIO.cpp
 - InputReader.java
 - OutputWriter.java
+- [Main.java](Misc/Main.java)
 
 Solutions
 - /Geometry
@@ -149,18 +163,25 @@ Solutions
 - /Math
     - GrayCode.cpp
     - BurnsideLemma.cpp
+    - [AndConvolution.cpp](Solutions/Math/AndConvolution.cpp)
 - /DP
     - MaximumClique.cpp
     - CycleCount.cpp
     - PermutationTransformTrick.cpp
     - ConnectedComponent.cpp
 - /Graph
-    - DAGWidth.cpp
+    - [DagWidth.cpp](Solutions/Graph/DagWidth.cpp)
+- /Greedy
+    - [StableMarriage.cpp](Solutions/Greedy/StableMarriage.cpp)
 - /Strings
     - LCS.cpp
     - Periods.cpp
     - Rotation.cpp
     - Palindrome.cpp
     - StringDivisors.cpp
+    - CommonDivisors.cpp
+    - [MinimalRotation.cpp](Solutions/Strings/Hash/MinimalRotation.cpp)
 - /DataStructures
     - Mo.cpp
+- /SegmentTree
+    - [sorting.cpp](Solutions/SegmentTree/sorting.cpp)
