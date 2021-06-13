@@ -39,7 +39,7 @@ def updated_readme(readme_file, root_dir):
                 print(line)
                 continue
 
-            if match := re.search(r"(\s*[-]+\s*)([A-Za-z0-9.]+)([^\n]*)", line):
+            if match := re.search(r"(\s*[-]+\s*)([A-Za-z0-9._]+)([^\n]*)", line):
                 prev_space, file, after_space = (match.groups())
 
                 dirs = list(filter(lambda x: "/"+file in x, files))
