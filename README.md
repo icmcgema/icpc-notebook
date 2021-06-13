@@ -4,9 +4,9 @@
 
 https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsDnGs/edit#gid=0
 
-## Todo
+## Table of Contents
 
-DataStructures
+### DataStructures
 - [BIT.cpp](DataStructures/BIT.cpp)
 - [BIT2D.cpp](DataStructures/BIT2D.cpp)
 - [DSUPartial.cpp](DataStructures/DSUPartial.cpp)
@@ -31,7 +31,7 @@ DataStructures
 - Paretto.cpp
 - [TwoPointers.cpp](DataStructures/TwoPointers.cpp)
 
-DP
+### DP
 - DivideAndConquer.cpp
 - [CHT.cpp](DP/CHT.cpp)
 - Aliens.cpp
@@ -41,7 +41,7 @@ DP
 - SOS.cpp
 - KnapsackBounded.cpp
 
-Geometry
+### Geometry
 - [Point.cpp](Geometry/Point.cpp)
 - [PointUtils.cpp](Geometry/PointUtils.cpp)
 - Point3D.cpp
@@ -56,7 +56,7 @@ Geometry
 - Shoelace.cpp
 - StableSum.cpp
 
-Graphs
+### Graphs
 - [Kruskal.cpp](Graphs/Kruskal.cpp)
 - [BellmanFord.cpp](Graphs/BellmanFord.cpp)
 - [Dinic.cpp](Graphs/Dinic.cpp)
@@ -82,7 +82,7 @@ Graphs
     - [simple.cpp](Graphs/CycleSimulation/simple.cpp)
     - [tortoise_hare.cpp](Graphs/CycleSimulation/tortoise_hare.cpp)
 
-Tree
+### Tree
 - EulerTour.cpp
 - [Centroid.cpp](Tree/Centroid.cpp)
 - CentroidQuery.cpp
@@ -92,7 +92,7 @@ Tree
 - SmallToLarge.cpp
 - [Isomorphism.cpp](Tree/Isomorphism.cpp)
 
-Math
+### Math
 - [Karatsuba.cpp](Math/Karatsuba.cpp)
 - EuclideanGCD.cpp
 - [MillerRabin.cpp](Math/MillerRabin.cpp)
@@ -130,7 +130,7 @@ Math
 - Probability.cpp
 - MarkovChains.cpp
 
-Strings
+### Strings
 - [AhoCorasick.cpp](Strings/AhoCorasick.cpp)
 - [PalindromicTree.cpp](Strings/PalindromicTree.cpp)
 - Trie.cpp
@@ -145,7 +145,7 @@ Strings
 - LyndonFactorization.cpp
 - Booths.cpp
 
-Misc
+### Misc
 - [OrderedSet.cpp](Misc/OrderedSet.cpp) `+ OrdMultiset e avisos`
 - Rope.cpp
 - [Date.cpp](Misc/Date.cpp) `@ https://github.com/IMEplusplus/icpc-notebook/tree/master/misc`
@@ -155,7 +155,7 @@ Misc
 - OutputWriter.java
 - [Main.java](Misc/Main.java)
 
-Solutions
+### Solutions
 - /Geometry
     - NearestTwoPoints.cpp
     - FarthestTwoPoints.cpp

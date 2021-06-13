@@ -29,9 +29,9 @@ def updated_readme(readme_file, root_dir):
         for line in f:
             line = line.rstrip('\n ')
             
-            if match := re.search(r"^[#]+\s*(.+)", line):
+            if match := re.search(r"^[#]{1,2}\s+(.+)", line):
                 text = match.group(1)
-                in_todo = (text == "Todo")
+                in_todo = (text == "Table of Contents")
                 print(line)
                 continue
 
