@@ -69,7 +69,7 @@ https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsD
 - Kosaraju.cpp
 - [EdmondsMDST.cpp](Graphs/EdmondsMDST.cpp)
 - [DominatorTree.cpp](Graphs/DominatorTree.cpp)
-- TarjanSCC.cpp
+- [TarjanSCC.cpp](Graphs/TarjanSCC.cpp)
 - TarjanBridge.cpp
 - Prim.cpp
 - [DynamicConnectivity.cpp](Graphs/DynamicConnectivity.cpp)
