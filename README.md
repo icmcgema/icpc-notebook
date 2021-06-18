@@ -70,7 +70,7 @@ https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsD
 - [EdmondsMDST.cpp](Graphs/EdmondsMDST.cpp)
 - [DominatorTree.cpp](Graphs/DominatorTree.cpp)
 - [TarjanSCC.cpp](Graphs/TarjanSCC.cpp)
-- TarjanBridge.cpp
+- [TarjanBridges.cpp](Graphs/TarjanBridges.cpp)
 - Prim.cpp
 - [DynamicConnectivity.cpp](Graphs/DynamicConnectivity.cpp)
 - BlockCut.cpp
@@ -104,11 +104,11 @@ https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsD
 - ChineseRemainder.cpp
 - ModMul.cpp
 - [FFT.cpp](Math/FFT.cpp)
-- NTT.cpp
+- [NTT.cpp](Math/NTT.cpp)
 - DiscreteLog.cpp
-- PrimitiveRoot.cpp
+- [PrimitiveRoot.cpp](Math/PrimitiveRoot.cpp)
 - Mobius.cpp
-- EulerPhi.cpp
+- [EulerPhi.cpp](Math/EulerPhi.cpp)
 - [Sieve.cpp](Math/Sieve.cpp)
 - [LinearSieve.cpp](Math/LinearSieve.cpp)
 - SegmentedSieve.cpp
@@ -157,7 +157,7 @@ https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsD
 
 ### Solutions
 - /Geometry
-    - NearestTwoPoints.cpp
+    - [NearestTwoPoints.cpp](Solutions/Geometry/NearestTwoPoints.cpp)
     - FarthestTwoPoints.cpp
     - SmallestEnclosingCircle.cpp
 - /Math
