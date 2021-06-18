@@ -10,19 +10,12 @@ using ll = long long;
  * Essa n-th root é g^c, onde g é um *primitive root* de 2^k
  */
 
-/**
- * NTT eh o mesmo que FFT, so que com um *n-th root* diferente
- * MOD tem que ser um primo do tipo p = c * 2^k + 1
- * Com isso, a n-th root existe pra n = 2^k. 
- * Essa n-th root é g^c, onde g é um *primitive root* de 2^k
- */
-
 namespace NTT {
-	//					~10^5	 	 ~5*10^6	~10^6
 	const int mod = 	998244353;// 998244353	7340033
 	const int root = 	363395222;// 15311432	5
 	const int root_1 = 	704923114;// 469870224	4404020
 	const int root_pw = 1 << 19;//	 1 << 23;	1 << 20;
+	//					~5*10^5	 	 ~8*10^6	~10^6
 
 	int fast_pow(int a, int b, int m) {
 		int ans = 1;
