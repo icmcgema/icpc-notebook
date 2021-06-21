@@ -74,12 +74,14 @@ namespace Stirling {
 	}
 
 	/** Calcula S2(n, k) em O(k log(n)), usando fórmula de convolução */
-	int stirling2(int n, int k, int mod = 1e9 + 7) {
+	int stirling2(int n, int k, int mod) {
+
 		// calcula fatorial inverso
 		vector<ll> inv_fat(k+1);
 		inv_fat[0] = 1;
-		for(int i = 1; i <= k; ++i)
-			inv_fat[i] = inv_fat[i - 1] * fast_pow(i, mod - 2, mod) % mod;
+		for(int i = 1; i <= k; ++i) inv_fat[i] = inv_fat[i-1] * i % mod;
+		inv_fat[k] = fast_pow(inv_fat[k], mod - 2, mod);
+		for(int i = k-1; i >= 0; --i) inv_fat[i] = inv_fat[i+1] * (i+1) % mod;
 	
 		int ans = 0;
 		for(int i = 0; i <= k; ++i) {
@@ -91,9 +93,32 @@ namespace Stirling {
 		return ans;
 	}
 
+	/** 
+	 * Calcula S2(n, k) pra todo k de 0 ate n, usando convolucao com NTT
+	 * Nao esquecer de configurar corretamente as constantes do NTT, dependendo do seu MOD
+	 * Precisa incluir codigo de NTT
+	 * Complexidade: O(n log(n))
+	 */
+	vector<int> stirling2(int n, int mod) {
+
+		// calcula fatorial inverso
+		vector<ll> inv_fat(n+1);
+		inv_fat[0] = 1;
+		for(int i = 1; i <= n; ++i) inv_fat[i] = inv_fat[i-1] * i % mod;
+		inv_fat[n] = fast_pow(inv_fat[n], mod - 2, mod);
+		for(int i = n-1; i >= 0; --i) inv_fat[i] = inv_fat[i+1] * (i+1) % mod;
+
+		vector<int> a(n+1), b(n+1);
+		for(int i = 0; i <= n; ++i) {
+			a[i] = i%2? mod - inv_fat[i] : inv_fat[i];
+			b[i] = inv_fat[i] * fast_pow(i, n, mod) % mod;
+		}
+
+		return NTT::multiply(a, b);
+	}
+
 	/** Paridade de S2(n, k), em O(1) */
 	int second_kind_parity(int n, int k) {
 		return ( (n-k) & ((k-1)/2) ) == 0;
 	}
-
-}
+};
