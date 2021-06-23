@@ -7,7 +7,7 @@ namespace SuffixArray {
 	// returns lcp array, with size a.size()-1, in which lcp[i] represents 
 	// the longest common prefix between suffix in position i and the one in i+1
 	// Complexidade: O(n)
-	vector<int> build_lcp(vector<int> & a, string & s) {
+	vector<int> build_lcp(vector<int> const& a, string const& s) {
 		int n = a.size();
 		vector<int> pos(n), lcp(n-1);
 		for(int i = 0; i < n; ++i) {
@@ -27,9 +27,8 @@ namespace SuffixArray {
 
 
 	// Retorna um vetor com os indices de inicio de prefixo.
-	// Cuidado, essa funcao adiciona um caractere $ no final da string
 	// Complexidade: O(n logn )
-	vector<int> build_sufix_array(string & s) {
+	vector<int> build_sufix_array(string s) {
 		s += '$';
 		int n = s.size();
 		vector<int> head(n), a(n), a1(n), c(n), c1(n);
@@ -50,7 +49,7 @@ namespace SuffixArray {
 		int l = 1;
 		while(l < n) {
 			for(int i = 0; i < n; ++i) {
-				j = (a[i] - l + n)%n;
+				int j = (a[i] - l + n)%n;
 				a1[head[c[j]]++] = j;
 			}
 			cc = 0;
