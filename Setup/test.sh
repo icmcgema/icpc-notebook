@@ -1,10 +1,11 @@
+# If you want to use pre-compiled headers, this line must be the same as in prep.sh !!
+export CXXFLAGS="-std=c++17 -DLOCAL_PC -fsanitize=address,undefined -ggdb3 -Wall -Wextra -Wno-unused-result -Wshadow"
+
 C_RED="\e[1;31m";
 C_GREEN="\e[1;32m";
 C_BLUE="\e[1;34m";
 C_BOLD="\e[1;39m";
 C_RESET="\e[0m";
-
-export CXXFLAGS="-std=c++17 -DLOCAL_PC -fsanitize=address,undefined -ggdb3 -Wall -Wextra -Wno-unused-result -Wshadow"
 
 if [ $# -eq 0 ]; then
     EXEC_FILE="sol"
