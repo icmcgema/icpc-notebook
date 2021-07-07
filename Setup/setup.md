@@ -68,10 +68,10 @@ Para configurar:
 		while true; do 
 			read -d $'\04' -p "Reading $test_case.in:
 	" X
-			echo $X > "$test_case.in"
+			echo "$X" > "$test_case.in"
 			read -d $'\04' -p "Reading $test_case.out:
 	" X
-			echo $X > "$test_case.out"
+			echo "$X" > "$test_case.out"
 			test_case=$(($test_case + 1))
 		done
 	}
