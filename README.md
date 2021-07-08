@@ -73,6 +73,7 @@ https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsD
 - [TarjanBridges.cpp](Graphs/TarjanBridges.cpp)
 - Prim.cpp
 - [DynamicConnectivity.cpp](Graphs/DynamicConnectivity.cpp)
+- [NegativeCycles.cpp](Graphs/NegativeCycles.cpp)
 - BlockCut.cpp
 - BiconnectedComponents.cpp
 - [EulerCycle.cpp](Graphs/EulerCycle.cpp)
@@ -112,7 +113,7 @@ https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsD
 - [Sieve.cpp](Math/Sieve.cpp)
 - [LinearSieve.cpp](Math/LinearSieve.cpp)
 - SegmentedSieve.cpp
-- Stirling.cpp
+- [Stirling.cpp](Math/Stirling.cpp)
 - LucasTheorem.cpp
 - [GaussianElimination.cpp](Math/GaussianElimination.cpp)
 - MatrixExponentiation.cpp
@@ -120,7 +121,7 @@ https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsD
 - Simplex.cpp
 - [PointsUnderLine.cpp](Math/PointsUnderLine.cpp)
 - [BerlekampMassey.cpp](Math/BerlekampMassey.cpp)
-- LagrangeInterpolation.cpp
+- [LagrangeInterpolation.cpp](Math/LagrangeInterpolation.cpp)
 - MultiPointEvalutation.cpp
 - Combinatorics.cpp
 - Integrate.cpp `@ https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4146`
@@ -135,10 +136,10 @@ https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsD
 - [PalindromicTree.cpp](Strings/PalindromicTree.cpp)
 - Trie.cpp
 - [Hash.cpp](Strings/Hash.cpp)
-- SuffixTree.cpp
+- [SuffixTree.cpp](Strings/SuffixTree.cpp)
 - [SuffixArray.cpp](Strings/SuffixArray.cpp)
 - [SuffixAutomaton.cpp](Strings/SuffixAutomaton.cpp)
-- KMPAutomata.cpp
+- [KMPAutomata.cpp](Strings/KMPAutomata.cpp)
 - [KMP.cpp](Strings/KMP.cpp)
 - [Z.cpp](Strings/Z.cpp)
 - Manacher.cpp
@@ -161,7 +162,7 @@ https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsD
     - FarthestTwoPoints.cpp
     - SmallestEnclosingCircle.cpp
 - /Math
-    - GrayCode.cpp
+    - [GrayCode.cpp](Solutions/Math/GrayCode.cpp)
     - BurnsideLemma.cpp
     - [AndConvolution.cpp](Solutions/Math/AndConvolution.cpp)
 - /DP
