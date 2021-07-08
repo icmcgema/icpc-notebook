@@ -88,7 +88,7 @@ struct MCMF {
 
 	pair<T, T> flow(int s, int t) {
 		T cost = 0, flow = 0;
-		bellman_ford(s);
+		bellman_ford(s); // remover essa linha se o grafo nao tiver pesos negativos
 
 		while (dijkstra(s, t)) {
 			T f = flow_inf;
