@@ -16,7 +16,7 @@ struct Cartesian {
 		vec.eb();
 	}
 
-
+	// O(n) amortized after n invocations, but O(tree height) in worst case. 
 	void add(int x) {
 		vec.eb(x);
 		int u = vec.size()-1;
@@ -25,7 +25,6 @@ struct Cartesian {
 		while(st.size() > 1 and vec[st.top()] > vec.back()) {
 			st.pop();
 		}
-		// deb(last);
 
 		int v = st.top();
 		L.back() = R[v];
@@ -38,9 +37,17 @@ struct Cartesian {
 		return R[0];
 	}
 
-	// get value of current node
+	// get value of node i
 	T& operator[](int i) const {
 		return vec[i];
+	}
+	
+	int left(int i) const {
+		return L[i];
+	}
+	
+	int right(int i) const {
+		return R[i];
 	}
 
 	// in order traversal
@@ -50,7 +57,8 @@ struct Cartesian {
 		traverse(R[u], os);
 		os << pre[vec[u]] << ' ';
 	}
-
+	
+	// in order traversal
 	void traverse(ostream& os) const {
 		traverse(root(), os);
 	}
