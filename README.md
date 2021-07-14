@@ -9,6 +9,7 @@ https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsD
 ### DataStructures
 - [BIT.cpp](DataStructures/BIT.cpp)
 - [BIT2D.cpp](DataStructures/BIT2D.cpp)
+- [CartesianTree.cpp](DataStructures/CartesianTree.cpp)
 - [DSUPartial.cpp](DataStructures/DSUPartial.cpp)
 - [SparseTable.cpp](DataStructures/SparseTable.cpp)
 - [SegTree.cpp](DataStructures/SegTree.cpp)
