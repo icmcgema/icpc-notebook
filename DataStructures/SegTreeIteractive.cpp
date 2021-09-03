@@ -12,18 +12,18 @@ struct segtree {
 	}
 
 	T query(int l, int r) {
-		T ansl = zero;
-		T ansr = zero;
+		T ansl, ansr;
+		ansl = ansr = zero;
 		for(l += n, r += n; l < r; l >>= 1, r >>= 1) {
 			if(l&1) ansl = op(ansl, seg[l++]);
-			if(r&1) ansr = op(ansr, seg[--r]);
+			if(r&1) ansr = op(seg[--r], ansr);
 		}
 		return op(ansl, ansr);
 	}
 
 	void update(int p, T val) {
-		for(seg[p += n] = val; p >> 1; p >>= 1) {
-			seg[p >> 1] = op(seg[p], seg[p^1]);
+		for(seg[p += n] = val; p >>= 1;) {
+			seg[p] = op(seg[2 * p], seg[2 * p + 1]);
 		}
 	}
 };
