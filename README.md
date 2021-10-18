@@ -67,7 +67,7 @@ https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsD
 - [MCMF.cpp](Graphs/MCMF.cpp)
 - [Kuhn.cpp](Graphs/Kuhn.cpp)
 - [TwoSat.cpp](Graphs/TwoSat.cpp)
-- Kosaraju.cpp
+- [Kosaraju.cpp](Graphs/Kosaraju.cpp)
 - [EdmondsMDST.cpp](Graphs/EdmondsMDST.cpp)
 - [DominatorTree.cpp](Graphs/DominatorTree.cpp)
 - [TarjanSCC.cpp](Graphs/TarjanSCC.cpp)
