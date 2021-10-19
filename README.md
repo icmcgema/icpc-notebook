@@ -151,6 +151,7 @@ https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsD
 - [OrderedSet.cpp](Misc/OrderedSet.cpp) `+ OrdMultiset e avisos`
 - Rope.cpp
 - [Date.cpp](Misc/Date.cpp) `@ https://github.com/IMEplusplus/icpc-notebook/tree/master/misc`
+- [CoordinateCompressor.cpp](Misc/CoordinateCompressor.cpp)
 - Pragma.cpp
 - FastIO.cpp
 - InputReader.java
