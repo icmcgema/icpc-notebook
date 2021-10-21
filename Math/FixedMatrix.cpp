@@ -6,7 +6,7 @@ using ll = long long;
 
 template<typename T, int n, int m, int mod = -1>
 struct Matrix {
-	static constexpr bool has_mod = (mod == -1);
+	static constexpr bool has_mod = (mod != -1);
 
 	array<T, n*m> mat = {};
 
@@ -60,7 +60,7 @@ struct Matrix {
 	constexpr Matrix& operator-=(Matrix const& rhs) {
 		for(int i = 0; i < n; i++) {
 			for(int j = 0; j < m; j++) {
-				(*this)(i, j) -= - rhs(i, j);
+				(*this)(i, j) -= rhs(i, j);
 				if constexpr (has_mod) {
 					if ((*this)(i, j) < 0) (*this)(i, j) += mod;
 				}
