@@ -89,7 +89,7 @@ struct Matrix {
 		return res;
 	}
 
-	constexpr Matrix<T, n, n, mod> operator^(int k) const {
+	constexpr Matrix<T, n, n, mod> operator^(ll k) const {
 		// garantees matrix is square
 		static_assert(n == m, "n != m");
 
@@ -117,7 +117,7 @@ struct Matrix {
 	}
 
 	constexpr bool operator==(Matrix<T, n, m, mod> const& rhs) const {
-		return equal(mat.begin(), mat.end(), rhs.mat.begin());
+		return mat == rhs.mat;
 	}
 
 	constexpr Matrix<T, m, n, mod> transposed() const {
