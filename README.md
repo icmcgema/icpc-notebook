@@ -152,7 +152,7 @@ https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsD
 - Rope.cpp
 - [Date.cpp](Misc/Date.cpp) `@ https://github.com/IMEplusplus/icpc-notebook/tree/master/misc`
 - [CoordinateCompressor.cpp](Misc/CoordinateCompressor.cpp)
-- Pragma.cpp
+- [Pragma.cpp](Misc/Pragma.cpp)
 - FastIO.cpp
 - InputReader.java
 - OutputWriter.java
