@@ -75,7 +75,7 @@ https://docs.google.com/spreadsheets/d/1Y-_G2ioJ_iheDGKVHrQQu96keee66Y4s6SRxUTsD
 - Prim.cpp
 - [DynamicConnectivity.cpp](Graphs/DynamicConnectivity.cpp)
 - [NegativeCycles.cpp](Graphs/NegativeCycles.cpp)
-- BlockCut.cpp
+- [BlockCut.cpp](Graphs/BlockCut.cpp)
 - BiconnectedComponents.cpp
 - [EulerCycle.cpp](Graphs/EulerCycle.cpp)
 - [MCMF.cpp](Graphs/MCMF.cpp)
