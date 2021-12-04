@@ -2,7 +2,7 @@
 using namespace std;
 
 // a paretto is a structure that has the property that
-// for no point X there is no another point Y such that
+// for every point X there is no other point Y such that
 // X[0] < Y[0] and X[1] < Y[1] 
 template<typename K, typename V>
 struct Paretto {
