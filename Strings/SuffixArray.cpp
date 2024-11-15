@@ -2,11 +2,14 @@
 
 using namespace std;
 
+// Calculates suffix array and LCP data structures for a given string. Also works with
+// vectors, just replace string with vector<T> and s += '$' with s.push_back(c),
+// where c is a value smaller than every other.
 namespace SuffixArray {
 
 	// returns lcp array, with size a.size()-1, in which lcp[i] represents 
 	// the longest common prefix between suffix in position i and the one in i+1
-	// Complexidade: O(n)
+	// Complexity: O(n)
 	vector<int> build_lcp(vector<int> const& a, string const& s) {
 		int n = a.size();
 		vector<int> pos(n), lcp(n-1);
@@ -27,8 +30,9 @@ namespace SuffixArray {
 
 
 	// Retorna um vetor com os indices de inicio de prefixo.
-	// Complexidade: O(n logn )
-	vector<int> build_sufix_array(string s) {
+	// ! WARNING: This alters the original string, adds a '$' to the end.
+	// Complexity: O(n logn)
+	vector<int> build_sufix_array(string& s) {
 		s += '$';
 		int n = s.size();
 		vector<int> head(n), a(n), a1(n), c(n), c1(n);
